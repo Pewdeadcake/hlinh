@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lưu bút gửi tlinh</title>
+    <title>Lưu bút gửi ỉn</title>
     <style>
         @font-face {
             font-family: 'Iciel Brittany Signature Regular';
@@ -36,7 +36,8 @@
             height: auto;
             z-index: -1000; /* Lớp sau cùng */
             object-fit: cover;
-            filter: brightness(0.7) blur(5px);
+            /* THAY ĐỔI FILTER ĐỂ VIDEO RÕ NÉT HƠN */
+            filter: brightness(0.95); /* Giữ lại chút giảm sáng nhẹ để chữ dễ đọc, bỏ blur. Hoặc brightness(1) cho sáng tối đa. */
         }
 
         #hello-kitty-element {
@@ -138,7 +139,7 @@
 
         @media (max-width: 480px) {
             #video-background {
-                filter: brightness(0.6) blur(3px);
+                filter: brightness(0.9); /* Điều chỉnh cho mobile nếu cần */
             }
             #hello-kitty-element {
                 max-width: 180px;
@@ -173,7 +174,7 @@
 <body>
 
     <video autoplay loop muted playsinline id="video-background">
-        <source src="vid.mp4" type="video/mp4">
+        <source src="https://github.com/Pewdeadcake/hlinh/raw/refs/heads/main/vid.mp4" type="video/mp4">
         Trình duyệt của bạn không hỗ trợ thẻ video.
     </video>
 
@@ -190,16 +191,16 @@
         </div>
 
         <div class="dear-text" id="dearName">
-            dear tlinh,
+            dear ỉn,
         </div>
 
-        <div class="message-content" id="messageContent">??? vloz 3 năm r cơ à
-Ê đ nghĩ là t với m chơi với nhau dc tận 3 năm r ý m. ê á chính ra t lại thấy ngưỡng mộ m vcl =)))). kiểu nh lúc t thấy m kiểu dm học vcloz học??? Quả học đ gì ielts tận 10 tiếng xong mấy hnay sát thi m cứ đòi học 10 tiếng t kiểu ??? vcc con này bị điên r à đụ má. Xong dm m nh lúc cứ chửi t cơ mà dm chửi kiểu vui vui hài vl =))). Cx cx đi =))). Tính ra cả 3 năm c3 thì t thấy t trl bài m nhiều nhất tại tối nào cũng thấy mấy câu toán kiểu tgioi vcloz ưtf???. Cũng vloz đs nma hihi có kỉ liệm xong còn tiện thể là 1 cách t học luôn =))).Xong m còn toàn nhắc t làm bài đi đủ kiểu (mdu t toàn thấy nh bài quá t đ làm luôn =))))) ). Mà kiểu dm m còn bựa bựa tdn ý =))) vibes rất là trôn trôn nhs. Dm nghĩ sau đ dc cùng lớp nữa cũng buồn, nên là dmmm có chết cũng đ đc từ bỏ tình bạn này nhs để có gì sau t còn nhờ m bao nuôi nhs hihi. ờm thra t muốn nói nữa nma t mat goc tviet hihi. DCMMM M PHẢI THỦ KHOA HLU XONG SAAU CÓ GÌ T ĐI TÙ M BÀO CHỮA CHO T NHỚ CHƯA??!? hihi chắc v thoi, dù sau này m có buồn cgi cũng ph kể cho t nhs ❤️‍🩹. T quý m nhiều hơn ngày hqua và ít hơn ngày mai hihi 
+        <div class="message-content" id="messageContent">dm 3 năm r cơ à
+Uh đ ngờ t chơi với m tận 3 năm r ý. Dm k ai ngờ là tận từ lúc còn bộ 3 truyền thuyết đô thị (đụ má nhắc lại cũng kinh vloz) đến tận bây giờ là hết mẹ c3 r. Ê nh lúc t thấy m kiểu bựa vcloz bựa?? Kiểu nh cáit đ nghĩ dc là 1 đứa như m nói dc xong t kiểu ??? vcc con này bị điên r à đụ má. Xong dm m toàn chửi t cơ mà dm chửi kiểu vui vui hài vl =))). Cx cx đi =))). Xong dm nh lúc m còn toàn nghe tbm tâm sự xàm loz linh tinh buổi đêm mà toàn mấy chuyện đ gì của t ý m vẫn nghe dc ạ =))) vibes rất là trôn trôn nhs. Dm nghĩ sau đ dc cùng lớp nữa cũng buồn, nên là dmmm có chết cũng đ đc từ bỏ tình bạn này nhs để có gì sau t còn nhờ m bao nuôi nhs hihi. ờm thra t muốn nói nữa nma t mat goc tviet hihi. DCMMM M PHẢI THỦ KHOA NV1 CHO T NHỚ CHƯA??!? hihi chắc v thoi, dù sau này m có buồn cgi cũng ph kể cho t nhs ❤️‍🩹. T quý m nhiều hơn ngày hqua và ít hơn ngày mai hihi
         </div>
 
         <div class="signature-section">
             <div class="signature-description">
-                người vác xô lau nhà đi học
+                1 trong 3 truyền thuyết đô thị l10
             </div>
             <img src="image_0cc929.png" alt="Chữ ký Khôi" class="signature-image">
             <div class="signature-name">
