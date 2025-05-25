@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lưu bút gửi tlinh</title>
+    <style>
+        @font-face {
+            font-family: 'Iciel Brittany Signature Regular';
+            src: url('fonts/IcielBrittanySignature-Regular.woff2') format('woff2'),
+                 url('fonts/IcielBrittanySignature-Regular.woff') format('woff'),
+                 url('fonts/iCielBrittanySignature-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        #video-background {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1000; /* Lớp sau cùng */
+            object-fit: cover;
+            filter: brightness(0.7) blur(5px);
+        }
+
+        #hello-kitty-element {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -999;
+            max-width: 250px;
+            width: 60%;
+            height: auto;
+            opacity: 0.6;
+        }
+
+        .container {
+            background-color: rgba(255, 242, 235, 0.85); /* Màu #FFF2EB với độ mờ 85% */
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: left;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .image-frames {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+
+        .image-frame {
+            width: 45%;
+            aspect-ratio: 1 / 1;
+            background-color: #f0f0f0;
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-size: 0.9em;
+            color: #555;
+            overflow: hidden;
+            border: 2px solid #ddd;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 13px;
+        }
+
+        .dear-text {
+            font-family: 'Iciel Brittany Signature Regular', cursive;
+            font-size: 1.8em;
+            font-weight: normal;
+            margin-bottom: 8px;
+            color: #AD1457; /* Giữ màu hồng sẫm cho phù hợp */
+        }
+
+        .message-content {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .signature-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .signature-description {
+            font-size: 0.9em;
+            font-style: italic;
+            color: #444;
+            margin-bottom: 10px;
+        }
+
+        .signature-image {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 8px;
+        }
+
+        .signature-name {
+            font-size: 1em;
+            font-weight: bold;
+        }
+
+        @media (max-width: 480px) {
+            #video-background {
+                filter: brightness(0.6) blur(3px);
+            }
+            #hello-kitty-element {
+                max-width: 180px;
+                width: 50%;
+                opacity: 0.5;
+            }
+            .container {
+                padding: 15px;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                background-color: rgba(255, 242, 235, 0.9); /* Màu #FFF2EB với độ mờ 90% cho mobile */
+            }
+            .image-frame {
+                font-size: 0.8em;
+            }
+            .dear-text {
+                font-size: 1.5em;
+                margin-bottom: 6px;
+            }
+            .message-content {
+                font-size: 0.95em;
+            }
+            .signature-image {
+                width: 120px;
+            }
+            .signature-section {
+                margin-top: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <video autoplay loop muted playsinline id="video-background">
+        <source src="vid.mp4" type="video/mp4">
+        Trình duyệt của bạn không hỗ trợ thẻ video.
+    </video>
+
+    <img id="hello-kitty-element" src="hello_kitty.png" alt="Hello Kitty Background">
+
+    <div class="container">
+        <div class="image-frames">
+            <div class="image-frame">
+                <img src="pic1.png" alt="Ảnh kỷ niệm 1">
+            </div>
+            <div class="image-frame">
+                chờ ảnh 26/5 hihi
+            </div>
+        </div>
+
+        <div class="dear-text" id="dearName">
+            dear tlinh,
+        </div>
+
+        <div class="message-content" id="messageContent">??? vloz 3 năm r cơ à
+Ê đ nghĩ là t với m chơi với nhau dc tận 3 năm r ý m. ê á chính ra t lại thấy ngưỡng mộ m vcl =)))). kiểu nh lúc t thấy m kiểu dm học vcloz học??? Quả học đ gì ielts tận 10 tiếng xong mấy hnay sát thi m cứ đòi học 10 tiếng t kiểu ??? vcc con này bị điên r à đụ má. Xong dm m nh lúc cứ chửi t cơ mà dm chửi kiểu vui vui hài vl =))). Cx cx đi =))). Tính ra cả 3 năm c3 thì t thấy t trl bài m nhiều nhất tại tối nào cũng thấy mấy câu toán kiểu tgioi vcloz ưtf???. Cũng vloz đs nma hihi có kỉ liệm xong còn tiện thể là 1 cách t học luôn =))).Xong m còn toàn nhắc t làm bài đi đủ kiểu (mdu t toàn thấy nh bài quá t đ làm luôn =))))) ). Mà kiểu dm m còn bựa bựa tdn ý =))) vibes rất là trôn trôn nhs. Dm nghĩ sau đ dc cùng lớp nữa cũng buồn, nên là dmmm có chết cũng đ đc từ bỏ tình bạn này nhs để có gì sau t còn nhờ m bao nuôi nhs hihi. ờm thra t muốn nói nữa nma t mat goc tviet hihi. DCMMM M PHẢI THỦ KHOA HLU XONG SAAU CÓ GÌ T ĐI TÙ M BÀO CHỮA CHO T NHỚ CHƯA??!? hihi chắc v thoi, dù sau này m có buồn cgi cũng ph kể cho t nhs ❤️‍🩹. T quý m nhiều hơn ngày hqua và ít hơn ngày mai hihi 
+        </div>
+
+        <div class="signature-section">
+            <div class="signature-description">
+                người vác xô lau nhà đi học
+            </div>
+            <img src="image_0cc929.png" alt="Chữ ký Khôi" class="signature-image">
+            <div class="signature-name">
+                Nguyễn Cảnh Khôi
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript functions (nếu cần)
+    </script>
+
+</body>
+</html>
